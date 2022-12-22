@@ -19,8 +19,24 @@
     <!--メイン部分行くぞ-->
     <body>
         <!--設定アイコン-->
-        <div class="icon">
-            <i class="bi bi-gear"></i>
+        <div class="hamburger-menu">
+            <input type="checkbox" id="menu-btn-check">
+            <label for="menu-btn-check" class="menu-btn"> <span></span></label>
+            <!--ここからメニュー-->
+            <div class="menu-content">
+                <ul>
+                    <li>
+                        <a href="#">plant name change</a>
+                    </li>
+                    <li>
+                        <a href="#">another</a>
+                    </li>
+                    <li>
+                        <a href="#">another</a>
+                    </li>
+                </ul>
+            </div>
+            <!--ここまでメニュー-->
         </div>
 
         <header>
@@ -33,10 +49,10 @@
 
             <!--植物名前-->
             <div class="plant">
-                <h3>植物name</h3>
+                <h3>Plant name</h3>
                 <p>name</p>
                 <!--植物成長ゲージ-->
-                <h4>必要ＷＡＴＥＲ &ensp; /50</h4>
+                <h4>WATER &ensp; /50</h4>
             </div>
         </div>
             
@@ -44,47 +60,52 @@
     
         <!--todoリストの表示-->
         <main>
-            <h1>今日の目標が <span>1</span>個残っています！</h1>
+            <h1>Today's object <span>(number)</span>‼</h1>
 
-            <div class="sc_box">
-            <ul id="todo_list">
-                <li  class="list_item">
-                    <span class="todo_text">ここにtodolist</span>
-                    <button type="btn" class="delete-btn">ここにdeleteボタン     </button>
-                </li>
-                <li  class="list_item">
-                    <span class="todo_text">ここにtodolist</span>
-                    <button type="btn" class="delete-btn">ここにdeleteボタン     </button>
-                </li>
-            </ul>
-            </div>
-        </main>
+            <div class="container">
+                <div class="row">
+                    <div class="box col-sm-6 col-md-6">
+                    <div class="sc_box col-md-6 col-lg-6">
+                        <ul id="todo_list">
+                            <li  class="list_item">
+                                <span class="todo_text">ここにtodolist</span>
+                                <button type="btn" class="delete-btn">delete</button>
+                            </li>
+                            <li  class="list_item">
+                                <span class="todo_text">ここにtodolist</span>
+                                <button type="btn" class="delete-btn">delete</button>
+                            </li>
+                        </ul>
+                    </div>
+                    </div>
         
-        <!--植物プロフィール、todoリスト追加、記録-->
-        <footer>
-            <button id="modalOpen" class="button" ><i class="bi bi-plus-square"></i></button>
-                <div id="easyModal" class="modal">
-                    <!--modelの中身-->
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h1>todoを追加します</h1>
+                    <div class="box1 col-md-6 col-md-6">
+                    <!--植物プロフィール、todoリスト追加、記録-->
+                        <button id="modalOpen" class="button" ><i class="bi bi-plus-square"></i></button>
+                            <div id="easyModal" class="modal">
+                                <!--modelの中身-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1>My Todo</h1>
                             
-                            <span class="modalClose"><i class="bi bi-x-lg"></i></span>
-                        </div>
+                                        <span class="modalClose"><i class="bi bi-x-lg"></i></span>
+                                    </div>
 
-                        <div class="modal-body">
-                            <form id="form">
-                                <input id="text_input" type="text"
-                                    placeholder="TODOを入力してください"
-                                    autocomplete="off">
-                            </form>
-                            <p><button class="Add">TODO ADD</button></p>
-                        </div>
+                                    <div class="modal-body">
+                                        <form id="form">
+                                            <input id="text_input" type="text"
+                                                placeholder="Enter your"
+                                                autocomplete="off">
+                                        </form>
+                                        <p><button class="Add">TODO ADD</button></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </button>
                     </div>
                 </div>
-            </button>
-        </footer>
-
+            </div>
+        </main>
         <!--Jsを対応させる　ボディの最期に書くのが基本-->
         <script src ="final.js"></script>
 
