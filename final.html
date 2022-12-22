@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!--このhtmlの情報を書きます
+    文字データ、ブーストラップのアイコンを使用するための読み込み、cssの読み込み、レスポンシブに対応させましょう
+    タイトル>>　TODO_plant-->
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
+        <link rel="stylesheet", href="final.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+        <title>
+            TODO_plant
+        </title>
+
+    </head>
+
+    <!--メイン部分行くぞ-->
+    <body>
+        <!--設定アイコン-->
+        <div class="icon">
+            <i class="bi bi-gear"></i>
+        </div>
+
+        <header>
+            <!--植物Animationと機能-->
+            <!--植物-->
+            <div class="img">
+                <img src="22711079.jpg" height="300">
+            </div>
+
+            <!--植物名前-->
+            <div class="plant">
+                <h3>植物name</h3>
+                <p>abcd</p>
+            </div>
+
+            <!--植物成長ゲージ-->
+            <div class="water">
+                <h4>必要ＷＡＴＥＲ    &ensp;   /50</h4>
+            </div>
+        </header>
+    
+        <!--todoリストの表示-->
+        <main>
+            <h1>今日の目標が◎個残っています！</h1>
+            <ul id="todo_list">
+                <li  class="list_item">
+                    <span class="todo_text"></span>
+                    <button type="btn" class="delete-btn"></button>
+                </li>
+            </ul>
+
+        </main>
+                
+        <!--植物プロフィール、todoリスト追加、記録-->
+        <footer>
+            <div class="conrainer">
+                <button id="modalOpen" class="button" ><i class="bi bi-plus-square"></i></button>
+                    <div id="easyModal" class="modal">
+                        <div class="modal-content">
+                            
+                            <div class="modal-header">
+                                <h1>todoを追加します</h1>
+                            
+                                <span class="modalClose"><i class="bi bi-x-lg"></i></span>
+                            </div>
+
+                            <div class="modal-body">
+                                <form id="form">
+                                <input id="text_input" type="text"
+                                    placeholder="TODOを入力してください"
+                                    autocomplete="off">
+                                </form>
+                                <p><button class="Add">TODO ADD</button></p>
+                            </div>
+                        </div>
+                    </div>
+                </button>
+            </div>
+        </footer>
+
+        <!--Jsを対応させる　ボディの最期に書くのが基本-->
+        <script src ="final.js"></script>
+
+    </body>
+     
+</html>
