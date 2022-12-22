@@ -24,6 +24,7 @@
         </div>
 
         <header>
+        <div class="container-sm">
             <!--植物Animationと機能-->
             <!--植物-->
             <div class="img">
@@ -33,52 +34,55 @@
             <!--植物名前-->
             <div class="plant">
                 <h3>植物name</h3>
-                <p>abcd</p>
+                <p>name</p>
+                <!--植物成長ゲージ-->
+                <h4>必要ＷＡＴＥＲ &ensp; /50</h4>
             </div>
-
-            <!--植物成長ゲージ-->
-            <div class="water">
-                <h4>必要ＷＡＴＥＲ    &ensp;   /50</h4>
-            </div>
+        </div>
+            
         </header>
     
         <!--todoリストの表示-->
         <main>
-            <h1>今日の目標が◎個残っています！</h1>
+            <h1>今日の目標が <span>1</span>個残っています！</h1>
+
+            <div class="sc_box">
             <ul id="todo_list">
                 <li  class="list_item">
-                    <span class="todo_text"></span>
-                    <button type="btn" class="delete-btn"></button>
+                    <span class="todo_text">ここにtodolist</span>
+                    <button type="btn" class="delete-btn">ここにdeleteボタン     </button>
+                </li>
+                <li  class="list_item">
+                    <span class="todo_text">ここにtodolist</span>
+                    <button type="btn" class="delete-btn">ここにdeleteボタン     </button>
                 </li>
             </ul>
-
+            </div>
         </main>
-                
+        
         <!--植物プロフィール、todoリスト追加、記録-->
         <footer>
-            <div class="conrainer">
-                <button id="modalOpen" class="button" ><i class="bi bi-plus-square"></i></button>
-                    <div id="easyModal" class="modal">
-                        <div class="modal-content">
+            <button id="modalOpen" class="button" ><i class="bi bi-plus-square"></i></button>
+                <div id="easyModal" class="modal">
+                    <!--modelの中身-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1>todoを追加します</h1>
                             
-                            <div class="modal-header">
-                                <h1>todoを追加します</h1>
-                            
-                                <span class="modalClose"><i class="bi bi-x-lg"></i></span>
-                            </div>
+                            <span class="modalClose"><i class="bi bi-x-lg"></i></span>
+                        </div>
 
-                            <div class="modal-body">
-                                <form id="form">
+                        <div class="modal-body">
+                            <form id="form">
                                 <input id="text_input" type="text"
                                     placeholder="TODOを入力してください"
                                     autocomplete="off">
-                                </form>
-                                <p><button class="Add">TODO ADD</button></p>
-                            </div>
+                            </form>
+                            <p><button class="Add">TODO ADD</button></p>
                         </div>
                     </div>
-                </button>
-            </div>
+                </div>
+            </button>
         </footer>
 
         <!--Jsを対応させる　ボディの最期に書くのが基本-->
